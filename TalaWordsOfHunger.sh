@@ -21,9 +21,10 @@ full=(
 	"Talal packs his mom's lunch."
 )
 
-ARC=$(uname)
 
-if [ $ARC = "Linux" ]
+check=$(date | awk '{print substr($5,3,1)}')
+
+if [ $check = ":" ]
 then
 	declare -i choice=$(date | awk '{print substr($5,7,2)}')
 else
