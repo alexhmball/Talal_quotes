@@ -13,12 +13,15 @@ hangry=(
 	"When Talal orders a meal, the chefs consider it a masterclass."
 	"Talal can name every ingredient in a dish just by smelling it."
 	"Talal's food cravings are so unstoppable, even the 'Do Not Eat' signs fear him!"
+	"When Bart Simpson says Eat my shorts, Talal does it."
+	"Talal doesn't eat, he consumes"
 )
 
 full=(
 	"You're lucky, Talal just ate."
 	"Talal is to life what MSG is to food."
 	"Talal packs his mom's lunch."
+	"Sugar, spice, and everything nice, These were the ingreidents chosen to create Talal."
 )
 
 
