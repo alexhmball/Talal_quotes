@@ -21,15 +21,18 @@ full=(
 	"Talal packs his mom's lunch."
 )
 
-declare -i choice=$(date | awk '{print substr($4,7,2)}')
+ARC=$(uname)
+
+if [ $ARC = "Linux" ]
+then
+	declare -i choice=$(date | awk '{print substr($5,7,2)}')
+else
+	declare -i choice=$(date | awk '{print substr($4,7,2)}')
+fi
+
 choice=$[ $choice % 2 ]
-echo $choice
-echo date | awk '{print substr($5,7,2)}'
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-# echo $SCRIPT_DIR
-# echo $choice
-# echo $(date | awk '{print substr($4,7,2)}')
-# echo $(date | awk '{print $4}')
+
 if [ $choice  -eq 0 ]
 then
 	cat $SCRIPT_DIR/HAPPY.ans
