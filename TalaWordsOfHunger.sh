@@ -22,7 +22,9 @@ full=(
 )
 
 declare -i choice=$(date | awk '{print substr($4,7,2)}')
-choice=$[$choice % 2]
+choice=$[ $choice % 2 ]
+echo $choice
+echo date | awk '{print substr($5,7,2)}'
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 # echo $SCRIPT_DIR
 # echo $choice
@@ -30,6 +32,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 # echo $(date | awk '{print $4}')
 if [ $choice  -eq 0 ]
 then
+	cat $SCRIPT_DIR/HAPPY.ans
 	echo
 	echo "Good news.."
 	Talal=${full[ $RANDOM % ${#full[@]} ]}
