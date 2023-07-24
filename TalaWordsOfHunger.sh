@@ -15,6 +15,7 @@ hangry=(
 	"Talal's food cravings are so unstoppable, even the 'Do Not Eat' signs fear him!"
 	"When Bart Simpson says Eat my shorts, Talal does it."
 	"Talal doesn't eat, he consumes"
+ "there are only 16 colours in IRC because Talal ate the rest."
 )
 
 full=(
