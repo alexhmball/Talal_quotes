@@ -24,17 +24,7 @@ full=(
 	"Sugar, spice, and everything nice, These were the ingreidents chosen to create Talal."
 )
 
-
-check=$(date | awk '{print substr($5,3,1)}')
-
-if [ $check = ":" ]
-then
-	declare -i choice=$(date | awk '{print substr($5,7,2)}')
-else
-	declare -i choice=$(date | awk '{print substr($4,7,2)}')
-fi
-
-choice=$[ $choice % 2 ]
+choice=$[ $RANDOM % 2 ]
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 if [ $choice  -eq 0 ]
