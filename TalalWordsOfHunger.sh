@@ -27,19 +27,17 @@ full=(
 )
 
 choice=$[ $RANDOM % 2 ]
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPT_DIR=$( dirname -- "${BASH_SOURCE[0]}" )
 
 if [ $choice  -eq 0 ]
 then
 	cat $SCRIPT_DIR/HAPPY.ans
-	echo
-	echo "Good news.."
+	printf "\nGood news..\n"
 	Talal=${full[ $RANDOM % ${#full[@]} ]}
 	echo $Talal
 else
 	cat $SCRIPT_DIR/HUNGER.ans
-	echo
-	echo "Beware ..."
+	printf "\nBeware ...\n"
 	Talal=${hangry[ $RANDOM % ${#hangry[@]} ]}
 	echo $Talal
 fi
